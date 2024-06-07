@@ -1,0 +1,65 @@
+/* Estilos del contenedor principal del slider */
+.slider {
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* Estilos para el contenedor de las diapositivas */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos para cada diapositiva */
+.slide {
+    flex: 0 0 100%;
+}
+
+/* Estilos para desplazar las diapositivas al seleccionar el radio button correspondiente */
+#slide-1:checked~.slides {
+    transform: translateX(0);
+}
+
+#slide-2:checked~.slides {
+    transform: translateX(-100%);
+}
+
+#slide-3:checked~.slides {
+    transform: translateX(-200%);
+}
+
+#slide-4:checked~.slides {
+    transform: translateX(-300%);
+}
+
+.slide-radio {
+    display: none;
+}
+
+/* Estilos para las etiquetas que envuelven los puntos de navegación */
+.slide-label {
+    display: flex;
+    margin: 0 5px;
+}
+
+/* Estilos para las imágenes dentro de los puntos de navegación */
+.slide-dot img {
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* Estilos para las imágenes de las diapositivas */
+.slide-content img {
+    width: 600px;
+    height: 400px;
+}
+
+/* Estilos para el contenedor de las imagenes para seleccionar */
+.slide-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
